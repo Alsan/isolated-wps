@@ -18,6 +18,6 @@ services:
     volumes:
     - /tmp/.X11-unix:/tmp/.X11-unix
 
-    #    command: /opt/kingsoft/wps-office/office6/wps
-    command: tail -f /dev/null
+    command: /opt/kingsoft/wps-office/office6/wps
+    # command: tail -f /dev/null
 
