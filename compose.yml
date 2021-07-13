@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  wps:
+    build:
+      context: build
+      args:
+        VERSION: ${VERSION}
+        BUILD: ${BUILD}
+
+    image: iso-wps:18.04
+    container_name: wps
+
+    environment:
+    - DISPLAY=$DISPLAY
+    - QT_X11_NO_MITSHM=1
+
+    volumes:
+    - /tmp/.X11-unix:/tmp/.X11-unix
+
+    #    command: /opt/kingsoft/wps-office/office6/wps
+    command: tail -f /dev/null
+
